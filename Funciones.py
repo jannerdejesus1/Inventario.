@@ -124,7 +124,6 @@ def eliminar_producto(inventario):
     else:
         print("Operacion cancelada.\n")
 
-
 # Calcula y muestra estadisticas del inventario
 def calcular_estadisticas(inventario):
     print("\n--- Estadisticas ---")
@@ -132,31 +131,37 @@ def calcular_estadisticas(inventario):
         print("No hay productos registrados.\n")
         return
 
-    # Lambda para calcular el subtotal de un producto
     subtotal = lambda p: p["precio"] * p["cantidad"]
 
-    unidades_totales = 0
+    tipos_productos = len(inventario)
     valor_total = 0
+    unidades_totales = 0
+
     for producto in inventario:
-        unidades_totales += producto["cantidad"]
         valor_total += subtotal(producto)
+        unidades_totales += producto["cantidad"]
 
     producto_mas_caro = inventario[0]
     producto_mayor_stock = inventario[0]
+
     for producto in inventario:
         if producto["precio"] > producto_mas_caro["precio"]:
             producto_mas_caro = producto
+
         if producto["cantidad"] > producto_mayor_stock["cantidad"]:
             producto_mayor_stock = producto
 
-    print("Unidades totales: " + str(unidades_totales))
+    print("Tipos de productos registrados: " + str(tipos_productos))
+    print("Unidades totales en inventario: " + str(unidades_totales))
     print("Valor total del inventario: " + str(round(valor_total, 2)))
+
     print("Producto mas caro: " + producto_mas_caro["nombre"] +
           " ($" + str(producto_mas_caro["precio"]) + ")")
+
     print("Producto con mayor stock: " + producto_mayor_stock["nombre"] +
           " (" + str(producto_mayor_stock["cantidad"]) + " unidades)")
-    print()
 
+    print()
 
 # Crea el archivo CSV con encabezado si no existe
 def crear_archivo_si_no_existe(ruta):
