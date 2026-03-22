@@ -57,7 +57,7 @@ Ejemplo:
 ```python
 producto = {
     "nombre": "Mouse",
-    "precio": 25,
+    "precio": 25000,
     "cantidad": 10
 }
 ```
