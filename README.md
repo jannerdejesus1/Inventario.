@@ -89,7 +89,7 @@ Al cargar un CSV externo el sistema ofrece dos opciones:
 | Archivo | Contenido |
 |---|---|
 | `app.py` | Menu principal, bucle `while` y llamadas a funciones |
-| `sistema.py` | CRUD, estadisticas, `guardar_csv`, `cargar_csv`, `gestionar_carga_csv` |
+| `sistema.py` | CRUD, estadisticas |
 | `archivos.py` | `guardar_csv`, `cargar_csv`, `gestionar_carga_csv` |
 ---
 
