@@ -19,9 +19,9 @@ Sistema de consola desarrollado en Python para gestionar productos mediante oper
 
 ```
 inventario/
-├── main_menu.py          # Menu principal y bucle de ejecucion
-├── funciones.py    # Logica CRUD, estadisticas y manejo de CSV
-└── inventario.csv  # Archivo de datos (se crea automaticamente)
+├── app.py          # Menu principal y bucle de ejecucion
+├── sistema.py    # Logica CRUD, estadisticas
+└── archivos.py  # manejo de csv (se crea automaticamente)
 ```
 
 ---
